@@ -1,0 +1,62 @@
+.stepper-wrapper {
+  width: 100%;
+  max-width: 680px;
+  .k-step-list-horizontal ~ .k-progressbar {
+    height: 1px;
+    top: calc(((18px + 2 * 2px) / 2) + 2px / 2);
+  }
+  .k-step-list-horizontal {
+    .k-step-link {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+.k-step-list-horizontal .k-step-indicator + .k-step-label {
+  margin-top: 0;
+}
+
+.k-stepper {
+  .k-step-label {
+    .k-step-text {
+      font-size: 14px;
+      color: #324b4b;
+      padding-left: 5px;
+    }
+  }
+  .k-step-indicator {
+    @include size(18px, 18px);
+    @extend .text-white;
+    background-color: #324b4b;
+
+    .k-step-indicator-text {
+      @extend .text-13;
+      line-height: 18px;
+    }
+  }
+  .k-step-current {
+    .k-step-indicator {
+    }
+    .k-step-label {
+      .k-step-text {
+        @extend .text-primary;
+      }
+    }
+  }
+}
+
+.k-step-list-horizontal {
+  .k-step {
+    @extend .relative;
+    .k-step-link {
+      background-color: $white;
+    }
+    .k-step-label {
+      @extend .font-normal;
+      .k-step-text {
+        @extend .leading-5;
+      }
+    }
+  }
+}

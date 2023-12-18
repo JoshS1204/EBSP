@@ -1,0 +1,117 @@
+.k-dropdownlist {
+  border-color: $secondary-light;
+
+  .k-icon-button {
+    .k-svg-icon {
+      position: relative;
+      svg {
+        display: none;
+      }
+      &:after {
+        content: url('assets/images/icon/svg/icon-arrow-down.svg');
+        @include size(14px, 9px);
+        @include absolute(4px, 0);
+      }
+    }
+  }
+}
+
+.k-dropdownlist.k-picker-outline {
+  border-color: #CED4DA;
+  height: 40px;
+  &:hover,
+  &.k-hover {
+    border-color: #CED4DA;
+    color: #324B4B;
+    background-color: #fff;
+  }
+  .k-button.k-button-outline {
+    color: #324B4B;
+    border-color: #CED4DA;
+    border-left: 0;
+  }
+}
+.k-animation-container{
+  .k-list-container.k-popup{
+    border-top:0;
+    .k-list{
+      .k-list-filter{
+        padding: 0;
+        .k-input-outline:focus-within{
+          border-width: 0 0 1px 0;
+          border-radius: 0;
+          border-color: #DAF6F5;
+          .k-input-prefix{
+
+          }
+          .k-input-inner{
+
+          }
+        }
+      }
+      .k-list-content{
+        .k-list-item, .k-list-md .k-list-optionlabel{
+          padding-block: 8px;
+        }
+        .k-list-item.k-selected, .k-selected.k-list-optionlabel {
+          color: #1B3534;
+          background-color: #DAF6F5;
+        }
+      }
+    }
+  }
+}
+
+
+.k-colorpicker {
+  border-color: $secondary-light;
+
+  .k-input-inner {
+    width: 22px !important;
+    height: 22px !important;
+    padding-inline: 11px !important;
+
+    .k-color-preview {
+      border: none;
+    }
+  }
+
+  .k-icon-button {
+    border-left-color: $secondary-light !important;
+    padding-right: 7px;
+    padding-left: 6px;
+
+    .k-icon {
+      &:before {
+        content: url('assets/images/icon/svg/icon-arrow-down.svg');
+        @include size(14px, 9px);
+        @include absolute(0, 0);
+      }
+    }
+  }
+
+  &.color-picker-h-28 {
+    .k-input-inner {
+      width: 18px !important;
+      height: 18px !important;
+      padding: 4px 0px 4px 3px !important;
+    }
+  }
+
+  &.default-icon {
+    .k-icon-button {
+      border-left-color: transparent !important;
+      padding-block: 0;
+      padding-right: 0;
+      padding-left: 0;
+
+      .k-icon {
+        min-height: 10px;
+        &:before {
+          content: '\e006';
+          @include size(auto, auto);
+        }
+      }
+    }
+  }
+}

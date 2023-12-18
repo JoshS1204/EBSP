@@ -1,0 +1,94 @@
+
+$white: rgb(255 255 255);
+$black: rgb(0 0 0);
+$green: #0DC15C;
+$blue: #575FFF;
+
+// $kendo-color-primary:	#22B0AF;
+// btn-text -- #051F1F
+ 
+
+$primary: #22B0AF;
+$secondary: #F1F3F5;
+
+$secondary-light: #DADCE0;
+$success: #36B37E;
+$info: #0058E9;
+$warning: #FFAB00;
+$danger: #DE3730;
+
+$dark: #051F1F;
+$dark-1: #002020;
+$muted: #6c757d;
+$light: #f8f9fa;
+
+$divider: #E9ECEF;
+$border: #DEE2E6;
+$border-outline: #CED4DA;
+
+$Neutral700: #253858;
+$secondary40: #4A6362;
+$neutral50: #747877;
+$neutral98: #F7FAF9;
+$secondary20: #1B3534;
+$warning-light: #825500;
+$red-error: #BA1A1A;
+$red-error-2: #DE3730;
+$dark-primary: #00504F;
+$blue-gray: #BEC9C8;
+$warning: #E89B00;
+$green-dark: #006A69;
+
+// Fonts 
+$poppins: 'Poppins', sans-serif;
+
+// Bootstrap - Customizing Color System
+$kendo-color-primary: $primary;
+$kendo-color-secondary: $secondary;
+$kendo-color-info: $info;
+$kendo-color-success: $success;
+$kendo-color-warning: $warning;
+$kendo-color-error: $danger;
+$kendo-color-dark: $dark;
+$kendo-color-light: $light;
+
+
+
+$kendo-font-family: $poppins;
+// $kendo-button-md-font-size: 0.875rem;
+// $kendo-button-sm-line-height: 1.0;
+
+// Customizing Button
+$kendo-button-bg: $secondary;
+$kendo-button-selected-bg: $kendo-color-primary;
+$kendo-button-selected-border: $kendo-color-primary;
+
+$kendo-button-text: #003736;
+$kendo-button-lg-line-height: 1.572;
+
+$kendo-button-font-size: 0.875rem;
+$kendo-font-size-md: 0.875rem;
+$kendo-button-focus-shadow: 0 0 0 0 transparent;
+$kendo-button-selected-shadow: 0 0 0 0 transparent;
+
+// Customizing Checkbox
+$kendo-checkbox-checked-text: $white;
+
+// Input
+$kendo-input-lg-font-size: 0.875rem;
+// $kendo-input-line-height: 1.25rem;
+// $kendo-input-lg-line-height: 1.25rem;
+$kendo-input-text: #003736;
+$kendo-input-padding-x: 0.75rem;
+$kendo-input-focus-border: $primary;
+$kendo-input-focus-shadow: 	0 0 0 0 transparent;
+
+// Form
+$kendo-form-font-size: 0.875rem;
+$kendo-form-label-margin-bottom: 0.375rem;
+
+// Border radius
+$kendo-border-radius: 0.188rem;
+
+$kendo-radio-md-size: 1.25rem;
+$kendo-radio-border: #ADB5BD;

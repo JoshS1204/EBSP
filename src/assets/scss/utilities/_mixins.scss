@@ -1,0 +1,97 @@
+// Sizing shortcuts
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// Font styles
+@mixin font-Poppins($size: false, $colour: false, $weight: false, $lh: false) {
+    font-family: $poppins;
+
+    @if $size {
+        @include font-size($size);
+    }
+
+    @if $colour {
+        color: $colour;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    @if $lh {
+        @include line-height($lh);
+    }
+}
+
+// Link
+@mixin link($color-link) {
+    text-decoration: none;
+    color: $color-link;
+}
+
+// List type
+@mixin list-style {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Absolute Position
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+// Image Background
+@mixin background($imgpath, $position: 0 0, $repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+// Triangle
+@mixin arrow($width: 26px, $height: 26px, $direction: up, $color: $page) {
+    @include size(0, 0); // Right
+
+    @if $direction==right {
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-left: $width solid $color;
+    }
+
+    // Left
+    @if $direction==left {
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-right: $width solid $color;
+    }
+
+    // Up
+    @if $direction==up {
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-bottom: $height/2 solid $color;
+    }
+
+    // Down
+    @if $direction==down {
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-top: $height/2 solid $color;
+    }
+}
+
+// Usage
+//  &:after {
+//    @include arrow(54px, 54px, up, $page);
+//    @include absolute(0, auto, auto, 0);
+//    content: "";
+//    margin:0;
+// }

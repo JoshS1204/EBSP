@@ -1,0 +1,113 @@
+.app-drawer {
+  @include absolute(88px, 0, 0);
+  width: 332px;
+  border-left: 1px solid #f1f3f5;
+  transform: translateX(332px);
+  transition: all 0.3s ease-in;
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  .font-13 {
+    font-size: 13px;
+    line-height: 20px;
+    color: #1b3534;
+    margin-bottom: 12px;
+  }
+
+  .drawer-header {
+    padding: 20px;
+
+    .close {
+      width: 35px;
+      top: 11px;
+      left: 5px;
+      .k-icon{
+        font-size: 21px;
+        color: #003736;
+      }
+    }
+  }
+
+  .drawer-content-scroll {
+    max-height: calc(100vh - 213px);
+    max-height: calc(var(--vh, 1vh) * 100 - 213px);
+    padding: 0 20px;
+  }
+  .drawer-content-scroll-small{
+    max-height: calc(100vh - 198px);
+    max-height: calc(var(--vh, 1vh) * 100 - 198px);
+    padding: 0 16px;
+
+    &.sb--149{
+      max-height: calc(100vh - 149px);
+      max-height: calc(var(--vh, 1vh) * 100 - 149px);
+    }
+  }
+
+  .drawer-footer {
+    border-top: 1px solid #f1f3f5;
+    padding: 12px 24px;
+  }
+
+  .drawer-content-header{
+    margin: 0 -20px;
+    h3{
+      color: #009088;
+      border-bottom: 2px solid #009088;
+      padding:0 20px 13px;
+      margin-bottom: 8px;
+    }
+    .icon-search-box{
+      padding: 0 20px;
+      position: relative;
+      margin-bottom: 16px;
+      svg{
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 32px;
+      }
+      .k-textbox{
+        background: #F1F3F5;
+        &.k-input-solid {
+          border-color: #F1F3F5;
+        }
+      }
+    }
+  }
+}
+
+.individual-row-wrap{
+  border: 1px solid #CED4DA;
+  border-radius: 3px 3px 0 0;
+  .individual-row-head{
+    background: #F7FAF9;
+    padding: 10px;
+    border-bottom: 1px solid #CED4DA;
+  }
+  .individual-row-content{
+    padding: 10px;
+  }
+  .offer-row{
+    max-width: 130px;
+    margin: 13px 0 1px;
+    border-bottom: 1px solid #CED4DA;
+  }
+  .offer-row2{
+    max-width: 130px;
+    margin: 13px 0 1px;
+    .btn-group-cst{
+      margin-top: 3px;
+      button:nth-last-of-type(2){
+        border-radius: 3px 0 0 3px;
+      }
+      button:nth-last-of-type(1){
+        margin-left: -1px;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  }
+}

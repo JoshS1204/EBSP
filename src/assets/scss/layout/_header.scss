@@ -1,0 +1,13 @@
+.header{
+    height: 88px;
+    border-bottom: 1px solid #F1F3F5;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    &.small{
+        height: 58px;
+    }
+}

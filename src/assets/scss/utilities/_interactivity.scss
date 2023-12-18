@@ -1,0 +1,56 @@
+// Appearance
+.appearance-none {
+    appearance: none;
+  }
+  
+  // Cursor
+  .cursor-auto {
+    cursor: auto;
+  }
+  
+  .cursor-default {
+    cursor: default;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .cursor-wait {
+    cursor: wait;
+  }
+  
+  .cursor-text {
+    cursor: text;
+  }
+  
+  .cursor-move {
+    cursor: move;
+  }
+  
+  .cursor-help {
+    cursor: help;
+  }
+  
+  // Resize
+  .resize-none {
+    resize: none;
+  }
+  .resize-y {
+    resize: vertical;
+  }
+  .resize-x {
+    resize: horizontal;
+  }
+  .resize {
+    resize: both;
+  }
+  
+  // Scroll Behavior
+  .scroll-auto {
+    scroll-behavior: auto;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  

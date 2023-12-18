@@ -1,0 +1,155 @@
+// Background Color
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-none {
+  background-image: none;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-success {
+  background-color: $success;
+}
+
+.bg-info {
+  background-color: $info;
+}
+
+.bg-warning {
+  background-color: $warning;
+}
+
+.bg-danger {
+  background-color: $danger;
+}
+
+.bg-light {
+  background-color: $light;
+}
+
+.bg-dark {
+  background-color: $dark;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-neutral98{
+ background: $neutral98;
+}
+
+.bg-green-dark{
+ background: $green-dark;
+}
+
+// Text Color
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-success {
+  color: $success;
+}
+
+.text-info {
+  color: $info;
+}
+
+.text-warning {
+  color: $warning;
+}
+
+.text-danger {
+  color: $danger;
+}
+
+.text-light {
+  color: $light;
+}
+
+.text-dark {
+  color: $dark;
+}
+
+.text-muted {
+  color: $muted;
+}
+.text-white{
+  color: #fff;
+}
+.text-kendo-input-text{
+  color: $kendo-input-text;
+}
+.color-primary{
+  color: $primary;
+}
+// Border Color {
+.border-inherit {
+  border-color: inherit;
+}
+
+.border-current {
+  border-color: currentColor;
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
+.border-black {
+  border-color: rgb(0 0 0);
+}
+
+.border-white {
+  border-color: rgb(255 255 255);
+}
+
+.border-primary {
+  border-color: $primary;
+}
+
+.border-secondary {
+  border-color: $secondary;
+}
+
+.border-success {
+  border-color: $success;
+}
+
+.border-danger {
+  border-color: $danger;
+}
+
+// Divide Color
+.divide-transparent {
+  border-color: transparent;
+}
+
+.divide-black {
+  border-color: $black;
+}
+
+.divide-white {
+  border-color: $white;
+}
+
+.divide-primary {
+  border-color: $primary;
+}
+
+.divide-current {
+  border-color: $divider;
+}

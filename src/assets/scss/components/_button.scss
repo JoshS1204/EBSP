@@ -1,0 +1,110 @@
+.w-72 {
+  width: 72px;
+}
+
+.k-button {
+  &:focus,
+  &.k-focus {
+    box-shadow: 0 0 0px 0 transparent;
+
+    &:after,
+    &:before {
+      box-shadow: 0 0 0px 0 transparent;
+    }
+  }
+
+  &.k-button-outline {
+    color: #868e96;
+    border-color: $border-outline;
+
+    &.k-selected,
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+}
+
+.label-direction-group {
+  &.k-button-group {
+    .k-button-solid {
+      min-width: 68px;
+
+      &.k-button-solid-primary {
+        .k-button-text {
+          color: $white;
+        }
+      }
+
+      .k-button-text {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.label-order-group {
+  &.k-button-group {
+    .k-button-solid {
+      border-color: $border-outline;
+
+      .k-button-text {
+        color: #868e96;
+      }
+
+      &.k-button-solid-primary {
+        border-color: $primary;
+        .k-button-text {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+//Switch Button
+.k-switch-sm {
+  width: 42px;
+  height: 24px;
+}
+.k-switch-sm .k-switch-track {
+  width: 42px;
+  height: 24px;
+}
+.k-switch-on .k-switch-thumb {
+  background-color: $white;
+}
+.k-switch-label-on,
+.k-switch-label-off {
+  display: block;
+  height: 20px;
+  width: 20px;
+  z-index: 9999;
+}
+.k-switch-off .k-switch-label-off {
+  right: 0;
+   background: url(images/cross-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.k-switch-on .k-switch-label-on{
+  left: 0;
+  background: url(images/check-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-border {
+  &.k-button.k-button-outline {
+    border-color: #18a19b;
+    color: #18a19b;
+    padding: 8px 10px;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.k-button:disabled, .k-button.k-disabled {
+  opacity: 0.36;
+}

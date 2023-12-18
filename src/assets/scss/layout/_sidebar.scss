@@ -1,0 +1,74 @@
+.sidebar {
+  max-width: 332px;
+  min-width: 332px;
+  border-left: 1px solid $divider;
+  padding-top: 88px;
+  overflow: hidden auto;
+  &.small{
+    padding-top: 58px;
+  }
+
+  .sidebar-content-scroll {
+    height: calc(100vh - 65px);
+    height: calc(var(--vh, 1vh) * 100 - 65px);
+    max-height: calc(100vh - 65px);
+    max-height: calc(var(--vh, 1vh) * 100 - 65px);
+    padding: 25px 18px;
+
+    &.sb--88{
+      max-height: calc(100vh - 88px);
+      max-height: calc(var(--vh, 1vh) * 100 - 88px);
+    }
+    &.sb-153{
+      max-height: calc(100vh - 153px);
+      max-height: calc(var(--vh, 1vh) * 100 - 153px);
+    }
+    &.sb-123{
+      max-height: calc(100vh - 123px);
+      max-height: calc(var(--vh, 1vh) * 100 - 123px);
+    }
+    &.set-assign-ticket-sidebar{
+      max-height: calc(100vh - 227px);
+      max-height: calc(var(--vh, 1vh) * 100 - 227px);
+      padding: 25px 18px 0;
+    }
+  }
+
+  .sidebar-footer {
+    border-top: 1px solid #f1f3f5;
+    padding: 12px 24px;
+  }
+}
+
+.variation-parent{
+  border: 1px solid #DEE2E6;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+.total-seat-color-box {
+  border: 1px solid $border;
+  border-radius: 5px;
+  span {
+    &.title,
+    &.value {
+      color: #1b3534;
+    }
+    &.title {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.hold-occurence.scroll-wrap,
+.attendee-occurence.scroll-wrap{
+  max-height: 250px;
+  padding: 8px 10px;
+  border: 1px solid #F1F3F5;
+  .dates-loop{
+    label{
+      font-size: 14px;
+    }
+  }
+}
+

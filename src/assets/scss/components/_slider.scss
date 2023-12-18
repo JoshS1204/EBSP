@@ -1,0 +1,30 @@
+.slider-wrapper {
+    .k-icon {
+        &.k-i-caret-alt-left {
+            &:before {
+                content: "\e121";
+            }
+        }
+
+        &.k-i-caret-alt-right {
+            &:before {
+                content: "\e11e";
+            }
+        }
+    }
+
+    .k-slider-wrap {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+
+        .k-button-solid-base {
+            border-color: transparent;
+            background-color: transparent;
+
+            &:hover, &:focus {
+                border-color: #F1F3F5;
+                background-color: #F1F3F5;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+
+.form-label {
+    color: $dark-1;
+    margin-bottom: 6px;
+}
+
+.k-input{
+    .k-input-inner{
+        min-height: 38px;
+    }
+}
+
+.error-message {
+    display: block;
+    @extend .text-13;
+    @extend .leading-5;
+    color: $danger;
+}
+
+
+.data-change-notice{
+    width: 293px;
+    position: absolute;
+    bottom: 82px;
+    left: 50%;
+    z-index: 33;
+    transform: translateX(-50%);
+    -webkit-box-shadow: 0 0 1px 0 #091E424F;
+    box-shadow: 0 8px 12px 0 #091E4226;
+    border-radius: 3px;
+    .k-button-clear-base{
+        color: #fff;
+        margin: -10px -14px 0 0;
+    }
+    &.set-assign-ticket-change-notice{
+        bottom: 11px;
+    }
+}

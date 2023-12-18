@@ -1,0 +1,31 @@
+.popup-content {
+  box-shadow: 0 10px 18px 0 rgba(9, 30, 66, 0.15);
+  &.w-372 {
+    width: 372px;
+  }
+  .popup-header,
+  .popup-footer {
+    padding: 12px 24px;
+  }
+  .popup-header {
+    border-bottom: 1px solid #f1f3f5;
+    h1 {
+      color: $dark-1;
+    }
+  }
+  .popup-footer {
+    border-top: 1px solid #f1f3f5;
+  }
+
+  .popup-body{
+    padding: 24px;
+  }
+}
+
+.k-notification-group{
+  z-index: 1000010;
+  left: 50% !important;
+  transform: translate(-50%);
+  width: 445px;
+  max-width: calc(100% - 30px);
+}
