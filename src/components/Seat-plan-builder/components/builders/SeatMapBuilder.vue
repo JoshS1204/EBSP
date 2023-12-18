@@ -4,7 +4,7 @@
       <v-stage :draggable="true" :config="seatPlanData?.configKonva" ref="stage" @dragmove="updateKonvaConfig"
         @mousedown="handleStageMouseDown" @touchstart="handleStageMouseDown">
         <v-layer>
-          <v-group :draggable="true" @dragmove="updateShapeHoverButtonPosition"
+          <v-group :draggable="true" @dragmove="updateShapeHoverButtonPosition" @dragend="updateHistory"
             @mousedown="optionSidebarhandler(layerIndex, layer)" @touchstart="optionSidebarhandler(layerIndex, layer)" :config="layer?.layerConfig"
             v-for="(layer, layerIndex) in layersArray" :key="layerIndex">
             <template v-for="(shape, shapeIndex) in layer.shapes" :key="shapeIndex">
@@ -384,6 +384,11 @@ export default {
     }
   },
   methods: {
+    updateHistory(){
+      console.log("drag end, new data below")
+      console.log(this.layersArray)
+      this.$parent.historyManager(this.layersArray);
+    },
     handleTouchMove() { //=== Handle touch move by Nabeeb ===//
       this.isTouching = true
     },

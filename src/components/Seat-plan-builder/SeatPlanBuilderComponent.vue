@@ -282,21 +282,21 @@ export default {
       handler: function (val, oldVal) {
         console.log(new Date().toLocaleTimeString() + ": layers watcher")
         clearTimeout(this.debounce)
-        this.debounce = setTimeout(() => {
-          this.updateSeatCount()
-          this.updateTicketObjectCallMethod()
-        }, 200)
+        // this.debounce = setTimeout(() => {
+        //   this.updateSeatCount()
+        //   this.updateTicketObjectCallMethod()
+        // }, 200)
 
-        clearTimeout(this.debounceController)
-        this.debounceController = setTimeout(() => {
-          if (this.undoredoController) {
-            this.undoredoController = false
-          } else {
-            this.historyManager(this.layersArray)
-          }
-        }, 2000)
-      },
-      deep: true
+        // clearTimeout(this.debounceController)
+        // this.debounceController = setTimeout(() => {
+        //   if (this.undoredoController) {
+        //     this.undoredoController = false
+        //   } else {
+        //     this.historyManager(this.layersArray)
+        //   }
+        // }, 2000)
+      }
+      // deep: true
     },
     seatPlanData: {
       handler: function (val, oldVal) {
