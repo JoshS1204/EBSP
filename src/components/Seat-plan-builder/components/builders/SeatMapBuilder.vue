@@ -458,10 +458,8 @@ export default {
     deleteShapeHandler() {
       //check if any seat is sold and don't delete if sold
       let anySeatSold = false
-
-      if (
-        this.layersArray[this.selectedShapeIndex]?.layerConfig?.tableData?.type == 'waitingArea'
-      ) {
+      console.log("delete called")
+      if (this.layersArray[this.selectedShapeIndex]?.layerConfig?.tableData?.type == 'waitingArea' ) {
         if (this.layersArray[this.selectedShapeIndex]?.layerConfig?.tableData?.soldCount > 0) {
           anySeatSold = true
         }
@@ -472,8 +470,7 @@ export default {
             return
           }
         })
-      }
-
+        }
       if (anySeatSold) {
         this.$store.dispatch('notification', {
           status: true,
@@ -489,6 +486,7 @@ export default {
         this.selectedShapeIndex = ''
         this.optionSidebarVisibility = false
         this.isTransforming = false
+        updateHistory();
       }
     },
     duplicateShapeHandler() {
@@ -633,6 +631,7 @@ export default {
       this.importJsonModalVisibility = false
     },
     optionSidebarhandler(index, shape) {
+    console.log("options called")
       if (
         this.shapeTypesArray.includes(shape?.layerConfig?.tableData?.type) ||
         this.shapeTypesArray.includes(shape?.layerConfig?.objectData?.type)

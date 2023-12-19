@@ -226,7 +226,7 @@ export default {
         if (mutation.type == 'attributes' && that.autoSave && !this.isloadingFinalSave) {
           that.autoSave = false
           setTimeout(() => {
-            console.log(new Date().toLocaleTimeString() + ': observer hit');
+            // console.log(new Date().toLocaleTimeString() + ': observer hit');
             that.save_seat_plan()
           }, 20000)
         }
@@ -562,7 +562,7 @@ export default {
       }
     },
     save_seat_plan(redirect = false, isFromFinalContinue = false) {
-      console.log(new Date().toLocaleTimeString() + ": save_seat_plan hit")
+      // console.log(new Date().toLocaleTimeString() + ": save_seat_plan hit")
       this.seatPlanData = {
         ...this.seatPlanData,
         layersArray: JSON.parse(JSON.stringify(this.layersArray)),
