@@ -281,7 +281,7 @@ export default {
     layersArray: {
       handler: function (val, oldVal) {
         console.log(new Date().toLocaleTimeString() + ": layers watcher")
-        clearTimeout(this.debounce)
+        // clearTimeout(this.debounce)
         // this.debounce = setTimeout(() => {
         //   this.updateSeatCount()
         //   this.updateTicketObjectCallMethod()
@@ -295,8 +295,8 @@ export default {
         //     this.historyManager(this.layersArray)
         //   }
         // }, 2000)
-      }
-      // deep: true
+      },
+      deep: true
     },
     seatPlanData: {
       handler: function (val, oldVal) {

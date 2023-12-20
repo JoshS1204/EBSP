@@ -4,7 +4,7 @@
       <v-stage :draggable="true" :config="seatPlanData?.configKonva" ref="stage" @dragmove="updateKonvaConfig"
         @mousedown="handleStageMouseDown" @touchstart="handleStageMouseDown">
         <v-layer>
-          <v-group :draggable="true" @dragmove="updateShapeHoverButtonPosition" @dragend="updateHistory"
+          <v-group :draggable="true" @dragmove="updateShapeHoverButtonPosition" @dragend="updateHistory" 
             @mousedown="optionSidebarhandler(layerIndex, layer)" @touchstart="optionSidebarhandler(layerIndex, layer)" :config="layer?.layerConfig"
             v-for="(layer, layerIndex) in layersArray" :key="layerIndex">
             <template v-for="(shape, shapeIndex) in layer.shapes" :key="shapeIndex">
@@ -347,7 +347,13 @@ export default {
         this.debounce = setTimeout(() => { }, 2000)
       },
       deep: true
-    }
+    },
+    // rotation:{
+    //   handler: function (val, oldVal) {
+    //     clearTimeout(this.debounce)
+    //     this.debounce = setTimeout(() => {}, 2000)
+    //   },
+    // }
   },
   mounted() {
     this.observer = new ResizeObserver(throttle(this.handleResize, 0))
@@ -470,7 +476,7 @@ export default {
             return
           }
         })
-        }
+      }
       if (anySeatSold) {
         this.$store.dispatch('notification', {
           status: true,
@@ -486,7 +492,7 @@ export default {
         this.selectedShapeIndex = ''
         this.optionSidebarVisibility = false
         this.isTransforming = false
-        updateHistory();
+        this.updateHistory();
       }
     },
     duplicateShapeHandler() {

@@ -314,7 +314,8 @@ export default {
       }, 0)
     }
   },
-  watch: {},
+  watch: {
+  },
   methods: {
     stageGesture() {
       let that = this;
