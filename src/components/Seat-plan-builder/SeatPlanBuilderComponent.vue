@@ -280,7 +280,8 @@ export default {
   watch: {
     layersArray: {
       handler: function (val, oldVal) {
-        console.log(new Date().toLocaleTimeString() + ": layers watcher")
+        // console.log(new Date().toLocaleTimeString() + ": layers watcher", val)
+
         // clearTimeout(this.debounce)
         // this.debounce = setTimeout(() => {
         //   this.updateSeatCount()
@@ -319,10 +320,21 @@ export default {
     }
   },
   methods: {
+    reverseSlice(historyArray, index){
+      if(historyArray.length != 0){
+        return historyArray.slice(index).reverse();
+      }
+      return historyArray
+    },
     historyManager(data) {
       console.log(new Date().toLocaleTimeString() + ": history manager")
       let _history = JSON.parse(JSON.stringify(this.history))
       let t = this
+      //extra step to ensure no instant erasure on redo
+      if(this.historyStep != (_history.length - 1) ){
+        console.log("history length - 1 = " + _history.length - 1)
+        _history = this.reverseSlice(_history, this.historyStep)
+      }
       const _data = JSON.parse(JSON.stringify(data))
       _history.push(_data)
       if (_history.length > 3) {

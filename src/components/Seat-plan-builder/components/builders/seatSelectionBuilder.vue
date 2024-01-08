@@ -645,6 +645,7 @@ export default {
           axios.spread(({ data: seatplanAPI }, { data: eventDetailsAPI }, { data: tempOrder }, { data: availableSeats }) => {
             this.availableSeatsUUid = availableSeats?.result?.seats
             this.areaAvailability = this.areaAvailableSeatsObjectParser(availableSeats?.result?.areas)
+            console.log("seat plan data = ", seatplan)
             this.seatplanData = {
               ...seatplanAPI?.result?.seatplan,
               configKonva: {

@@ -344,16 +344,12 @@ export default {
     layersArray: {
       handler: function (val, oldVal) {
         clearTimeout(this.debounce)
-        this.debounce = setTimeout(() => { }, 2000)
+        this.debounce = setTimeout(() => {
+          console.log("check layers")
+         }, 500)
       },
       deep: true
-    },
-    // rotation:{
-    //   handler: function (val, oldVal) {
-    //     clearTimeout(this.debounce)
-    //     this.debounce = setTimeout(() => {}, 2000)
-    //   },
-    // }
+    }
   },
   mounted() {
     this.observer = new ResizeObserver(throttle(this.handleResize, 0))
@@ -597,6 +593,7 @@ export default {
         newShapeData = addLineObjectHandler(modifiedLayerConfig, newName)
       }
       this.layersArray.push(newShapeData)
+      this.updateHistory();
     },
     handleDragEnd(objType) {
       this[objType]()
