@@ -1,6 +1,6 @@
 # Changes
 
-1. Fix of history mechanism (double deletion into undo)
+1. Fix of history mechanism (do a double delete > undo 2 times > move object > undo again)
 2. Event handlers for drag & drop 
 3. Event handlers for delete
 
