@@ -8,9 +8,7 @@
 * History is not properly updating for first 2 updates. Appending the first layers array into History on initilisation did not help. (Sakib also has no idea what is going on here)
 * Rotation event listeners will need a flattened layers array data structures, a deep watcher which is the current implementation will impact performance significantly and is not specific to rotations only. A deep watcher will not work.
 
-
-
-## Project Setup
+# Project Setup
 ```sh
 npm install
 
